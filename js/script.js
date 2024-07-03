@@ -13,9 +13,7 @@ $(function(){
             $("#header").addClass("scroll");
             $("#fixedArea").addClass("on");
         }
-        
         // console.log(scrollTop +"////" + footerOffset);
-
         if(deviceWidth <= 850){
             if(footerOffset <= (scrollTop + 800)){
                 $("#fixedArea").addClass("hold");
@@ -71,11 +69,9 @@ $(function(){
                 alert("유효한 이메일을 입력해주세요 ( ex. abc@email.com )");
             }
         }
+        
     });
     $(".m_close").click(function(){
-        let emailval = $("input#email").val();
-        // console.log(emailval);
-        // form제출 수정하기
         $("#modal").fadeOut(100);
     });
 

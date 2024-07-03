@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>랜딩페이지</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -160,10 +160,13 @@
                         </div>
                     </div>
                     <div class="subwrap">
-                        <label for="email">
-                            <input type="text" id="email" placeholder="Enter your e-mail address">
-                        </label>
-                        <button class="btnO m_open">Subscribe</button>
+                        <!-- <form method="get 혹은 post" name="emailform" action="어디로 제출할지"> -->
+                        <form name="emailform" id="eform">
+                            <label for="email">
+                                <input type="email" id="email" placeholder="Enter your e-mail address" name="email">
+                            </label>
+                            <button type="button" class="btnO m_open">Subscribe</button>
+                        </form>
                     </div>
                 </div>
             </article>
@@ -203,6 +206,7 @@
         </div>
     </footer>
 
+    <!-- modal -->
     <div id="modal">
         <ul>
             <li class="m_cat"><img src="./img/cat-subscribe.png" alt=""></li>
@@ -212,7 +216,7 @@
                     Lorem Ipsum is simply dummy text of the printing industry. 
                 </div>
             </li>
-            <li><button type="submit" class="m_close btnO">OK! I Love HODU</button></li>
+            <li><button type="submit" class="m_close btnO" form="eform">OK! I Love HODU</button></li>
         </ul>
     </div>
 </body>

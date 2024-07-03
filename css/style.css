@@ -94,10 +94,9 @@ img{max-width:100%;}
         /* article */
         article#main_sub{position: relative;}
         article#main_sub .positionwrap{width:1280px;position: absolute;left:50%;top:50%;transform: translate(-50%,-50%);background: var(--color-highlight);padding:50px 60px;border-radius: 60px;color:white;z-index: 10;display: flex;align-items: center;justify-content: space-between;transition: 0.2s;}
-        article#main_sub .positionwrap .txtwrap{color:white;}
-        article#main_sub .positionwrap .txtwrap .txt_b{font-size:36px;margin:0 0 15px;}
-        article#main_sub .positionwrap .txtwrap .txt_r{font-size:14px;color:#F2E9D8;line-height: 1.2;}
-        article#main_sub .positionwrap .subwrap{position: relative;background: white;padding:5px;border-radius: 60px;}
+        article#main_sub .positionwrap > .txtwrap{color:white;}
+        article#main_sub .positionwrap > .txtwrap .txt_b{font-size:36px;margin:0 0 15px;}
+        article#main_sub .positionwrap > .txtwrap .txt_r{font-size:14px;color:#F2E9D8;line-height: 1.2;}
         article#main_sub .positionwrap .subwrap{position: relative;background: white;padding:5px;border-radius: 60px;}
         article#main_sub .positionwrap .subwrap label{padding:0 10px 0 63px;background: url(../img/mail.svg) no-repeat 23px 50%;}
         article#main_sub .positionwrap .subwrap label input{border:none;width:320px;font-size: 16px;}
@@ -154,8 +153,8 @@ img{max-width:100%;}
     section#main_lay3 ul li{width: calc((100% - 60px) / 3);}
     section#main_lay3 ul li + li{margin-left:30px;}
 
-    article#main_sub .positionwrap .txtwrap{padding:0 60px 0 0;}
-    article#main_sub .positionwrap .txtwrap .txt_r{line-height: 1.5;}
+    article#main_sub .positionwrap > .txtwrap{padding:0 60px 0 0;}
+    article#main_sub .positionwrap > .txtwrap .txt_r{line-height: 1.5;}
     article#main_sub .positionwrap{width:1000px;_flex-wrap: wrap;padding:40px 60px;border-radius: 40px;}
     article#main_sub .positionwrap .subwrap{flex-shrink: 0;}
     article#main_sub .positionwrap .subwrap label input{width:210px;}
@@ -184,7 +183,7 @@ img{max-width:100%;}
     section#main_lay3 ul li + li{margin-left:20px;}
 
     article#main_sub .positionwrap{flex-direction: column;width:750px;padding:50px;}
-    article#main_sub .positionwrap .txtwrap{padding:0 0 50px;}
+    article#main_sub .positionwrap > .txtwrap{padding:0 0 50px;}
     article#main_sub .positionwrap .subwrap label input{width:350px;}
 
     section#main_bg{background-position: 50% 25%;}
@@ -235,13 +234,12 @@ img{max-width:100%;}
 
     section#main_txt .txtwrap .txt_r{font-size:16px;}
 
-    section#main_more .txtwrap{}
     section#main_more .txtwrap .txt_r{font-size:16px;}
     section#main_more .txtwrap .txt_more{align-self: end;}
 
     article#main_sub .positionwrap{width:calc(100% - 60px);}
-    article#main_sub .positionwrap .txtwrap{padding:0 0 30px;}
-    article#main_sub .positionwrap .txtwrap .txt_b{font-size:24px;}
+    article#main_sub .positionwrap > .txtwrap{padding:0 0 30px;}
+    article#main_sub .positionwrap > .txtwrap .txt_b{font-size:24px;}
     article#main_sub .positionwrap .subwrap label input{width:30vw;;}
 
     #footer{height: auto;padding:30px 0;}
@@ -265,7 +263,7 @@ img{max-width:100%;}
     
     article#main_sub{top:-18px;}
     article#main_sub .positionwrap{padding:35px 30px 30px;border-radius: 18px;position: relative;top:auto;transform: translate(-50%,0);bottom:-68px;}
-    article#main_sub .positionwrap .txtwrap .txt_b{font-size:24px;margin:0 0 20px;}
+    article#main_sub .positionwrap > .txtwrap .txt_b{font-size:24px;margin:0 0 20px;}
     article#main_sub .positionwrap .subwrap{position:relative;margin:0 0 60px;height:40px;display: flex;align-items: center;justify-content: left;width:100%;}
     article#main_sub .positionwrap .subwrap label{background-size:18px auto;background-position: 13px 50%;;padding:10px 10px 10px 43px;width:100%;}
     article#main_sub .positionwrap .subwrap label input{font-size:12px;width:100%;}
