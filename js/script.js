@@ -1,8 +1,5 @@
 $(function(){
 
-    let deviceWidth = $("html, body").width();
-    let footerOffset = $("#footer").offset().top;
-
     //  header scroll function
     $(window).scroll(function(){
         let scrollTop = $("html, body").scrollTop();
@@ -13,23 +10,28 @@ $(function(){
             $("#header").addClass("scroll");
             $("#fixedArea").addClass("on");
         }
-        // console.log(scrollTop +"////" + footerOffset);
-        if(deviceWidth <= 850){
-            if(footerOffset <= (scrollTop + 800)){
-                $("#fixedArea").addClass("hold");
-            }else{
-                $("#fixedArea").removeClass("hold");
-            }
-        }else{
-            if(scrollTop > "1900"){
-                $("#fixedArea").addClass("hold");
-            }else{
-                $("#fixedArea").removeClass("hold");
-            }
-        }
-
+        btnFixed();
     });
     
+    $(window).resize(function(){
+        btnFixed();
+    });
+
+    // fixed버튼 위치가 계속 움직임 수정하기!
+    function btnFixed(){
+        let fixedOffset = $("#fixedArea").offset().top;
+        let footerOffset = $("#footer").offset().top;
+        let footerH = $("#footer").height();
+        
+        // console.log(footerOffset +"////"+ fixedOffset);
+        
+        if(footerOffset <= fixedOffset){
+            $("#fixedArea").css("bottom",footerH + 25);
+        }else{
+            $("#fixedArea").css("bottom","25px");
+        }
+    }
+
     $(".totop").click(function(){
         $("html, body").stop().animate({scrollTop : 0},500);
     });
@@ -90,7 +92,5 @@ $(function(){
     $("#header nav.menu .side_close").click(function(){
         $("#header nav.menu").removeClass("open");
     });
-
-
 
 });
