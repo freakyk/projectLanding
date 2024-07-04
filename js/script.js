@@ -21,9 +21,14 @@ $(function(){
     function btnFixed(){
         let footerH = $("#footer").height();
         const totalPageHeight = document.body.scrollHeight;
-        const scrollPoint = window.scrollY + window.innerHeight + footerH + 11; 
+        const scrollPoint = window.scrollY + window.innerHeight + footerH; 
         
-        // console.log(totalPageHeight +"////"+ window.scrollY+"////"+ window.innerHeight+"////"+ footerH);
+        console.log(
+            "컨텐츠의 전체높이 : "+ totalPageHeight 
+            +" / 스크롤높이 : "+ window.scrollY 
+            +" / 브라우저창높이 : "+ window.innerHeight
+            +" / 푸터높이 : "+ footerH
+        );
         
         if(scrollPoint >= totalPageHeight){
             $("#fixedArea").addClass("hold");
