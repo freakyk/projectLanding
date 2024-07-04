@@ -17,18 +17,18 @@ $(function(){
         btnFixed();
     });
 
-    // fixed버튼 위치가 계속 움직임 수정하기!
+    // totop btn fixed
     function btnFixed(){
-        let fixedOffset = $("#fixedArea").offset().top;
-        let footerOffset = $("#footer").offset().top;
         let footerH = $("#footer").height();
+        const totalPageHeight = document.body.scrollHeight;
+        const scrollPoint = window.scrollY + window.innerHeight + footerH + 11; 
         
-        // console.log(footerOffset +"////"+ fixedOffset);
+        // console.log(totalPageHeight +"////"+ window.scrollY+"////"+ window.innerHeight+"////"+ footerH);
         
-        if(footerOffset <= fixedOffset){
-            $("#fixedArea").css("bottom",footerH + 25);
+        if(scrollPoint >= totalPageHeight){
+            $("#fixedArea").addClass("hold");
         }else{
-            $("#fixedArea").css("bottom","25px");
+            $("#fixedArea").removeClass("hold");
         }
     }
 
@@ -36,7 +36,7 @@ $(function(){
         $("html, body").stop().animate({scrollTop : 0},500);
     });
 
-    // email 유효성 검사
+    // email 유효성 검사 - 추후에 pattern과 정규식 섞어쓰기
     $(".m_open").click(function(){
         let emailval = $("input#email").val();
 
